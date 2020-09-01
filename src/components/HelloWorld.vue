@@ -7,7 +7,14 @@
       <v-chart ref="chart" :options="myOptions" :autoresize="true"></v-chart>
     </div>
     <div class="Echarts">
-      <div id="main" style="width: 600px;height:400px;"></div>
+      <div id="main" style="width:600px;height:400px;"></div>
+    </div>
+    <div>
+      <dv-loading>Loading...</dv-loading>
+      <dv-active-ring-chart
+        :config="dataVOptions"
+        style="background-color:#282C34;width:300px;height:300px"
+      />
     </div>
   </div>
 </template>
@@ -30,7 +37,6 @@ export default {
       let r = Math.sin(2 * t) * Math.cos(2 * t);
       data.push([r, i]);
     }
-
     return {
       myOptions: {
         tooltip: {},
@@ -82,6 +88,31 @@ export default {
           },
         ],
         animationDuration: 2000,
+      },
+      dataVOptions: {
+        lineWidth: 10,
+        data: [
+          {
+            name: "周口",
+            value: 55,
+          },
+          {
+            name: "南阳",
+            value: 120,
+          },
+          {
+            name: "西峡",
+            value: 78,
+          },
+          {
+            name: "驻马店",
+            value: 66,
+          },
+          {
+            name: "新乡",
+            value: 80,
+          },
+        ],
       },
     };
   },

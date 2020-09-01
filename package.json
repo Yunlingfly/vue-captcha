@@ -13,6 +13,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@jiaminghi/data-view": "^2.9.9",
     "echarts": "^4.8.0",
     "echarts-gl": "^1.1.1",
     "vue": "^2.5.2",

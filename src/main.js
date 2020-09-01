@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import VECharts from 'vue-echarts' // refers to components/ECharts.vue in webpack
+import dataV from '@jiaminghi/data-view'
 import echarts from 'echarts'
 Vue.prototype.$echarts = echarts
 
@@ -18,6 +19,7 @@ import 'echarts-gl'
 
 // register component to use
 Vue.component('v-chart', VECharts)
+Vue.use(dataV)
 
 Vue.config.productionTip = false
 
